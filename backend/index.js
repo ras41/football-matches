@@ -7,6 +7,10 @@ const PORT = 5000;
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Backend is running. Try /api/matches");
+});
+
 app.get("/api/matches", async (req, res) => {
   try {
     const response = await fetch("https://www.scorebat.com/video-api/v3/");

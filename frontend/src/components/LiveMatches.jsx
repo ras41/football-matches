@@ -5,7 +5,8 @@ function LiveMatches() {
   const [matches, setMatches] = useState([]);
 
   useEffect(() => {
-    fetch("https://www.scorebat.com/video-api/v3/")
+    // fetch("https://www.scorebat.com/video-api/v3/")
+    fetch("https://football-matches-production.up.railway.app/api/matches")
       .then((res) => res.json())
       .then((data) => {
         setMatches(data.response); // Top 6
